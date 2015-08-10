@@ -16,12 +16,21 @@ class BreakoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        gameView.paddleX = view.bounds.midX
+        gameView?.paddleX = view.bounds.midX
     }
 
     @IBAction func pan(sender: UIPanGestureRecognizer) {
         gameView.paddleX = sender.locationInView(view).x
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
 
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        gameView.setNeedsDisplay()
+    }
+    
 }
 

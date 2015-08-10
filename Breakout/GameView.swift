@@ -18,19 +18,32 @@ class GameView: UIView {
 
     override func drawRect(rect: CGRect) {
         // Drawing code
-        var paddle: CGRect?
+        let width = self.bounds.width / 4
+        let height = self.bounds.height / 20
+        
+        let paddleOrigin = CGPoint(x: self.bounds.midX - (width/2), y: self.bounds.height * (18/20))
+        var paddle = CGRect(x: paddleOrigin.x, y: paddleOrigin.y, width: width , height: height)
+        
+        
         if let x = paddleX {
-            let width = self.bounds.width / 5
-            paddle = CGRect(x: x - (width/2), y: self.bounds.height * (18/20), width: width , height: self.bounds.height / 20)
-        } else {
-            paddle = CGRect(x: self.bounds.midX, y: self.bounds.height - 200, width: self.bounds.width / 5, height: self.bounds.height / 20)
+            paddle.origin.x = x - (width/2)
         }
-        if paddle != nil {
-            let bezPath = UIBezierPath(rect: paddle!)
-            UIColor.redColor().set()
-            bezPath.stroke()
-            bezPath.fill()
+        
+        let paddlePath = UIBezierPath(rect: paddle)
+        var ballOrigin = CGPoint(x: paddleOrigin.x, y: paddleOrigin.y - 15)
+        
+        if let x = paddleX {
+            ballOrigin = CGPoint(x: x, y: paddleOrigin.y - 15)
         }
+        
+        let ballPath = UIBezierPath(arcCenter: ballOrigin, radius: CGFloat(10), startAngle: CGFloat(0), endAngle: CGFloat(2 * M_PI), clockwise: true)
+        
+        UIColor.redColor().set()
+        paddlePath.stroke()
+        paddlePath.fill()
+        UIColor.blueColor().set()
+        ballPath.stroke()
+        ballPath.fill()
     }
     
 
