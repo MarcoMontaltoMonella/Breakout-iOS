@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BreakoutViewController.swift
 //  Breakout
 //
 //  Created by Marco Montalto Monella on 10/08/2015.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BreakoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
