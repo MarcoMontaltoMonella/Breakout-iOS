@@ -10,16 +10,18 @@ import UIKit
 
 class BreakoutViewController: UIViewController {
 
+    
+    @IBOutlet weak var gameView: GameView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        gameView.paddleX = view.bounds.midX
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func pan(sender: UIPanGestureRecognizer) {
+        gameView.paddleX = sender.locationInView(view).x
     }
-
 
 }
 

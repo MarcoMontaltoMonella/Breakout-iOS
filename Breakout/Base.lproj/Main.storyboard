@@ -16,9 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-qp-I3U">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-qp-I3U" customClass="GameView" customModule="Breakout" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QDB-ch-Vyu" appends="YES" id="lkZ-0r-9hL"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -29,8 +33,16 @@
                             <constraint firstItem="gPN-qp-I3U" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UIs-1b-wPk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="gPN-qp-I3U" id="cqj-mb-uLs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="QDB-ch-Vyu">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="25e-Wv-Cxn"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>

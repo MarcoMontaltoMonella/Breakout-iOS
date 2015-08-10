@@ -13,6 +13,7 @@
 		A95B29D41B78E137002E3840 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95B29D31B78E137002E3840 /* Images.xcassets */; };
 		A95B29D71B78E137002E3840 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95B29D51B78E137002E3840 /* LaunchScreen.xib */; };
 		A95B29E31B78E138002E3840 /* BreakoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B29E21B78E138002E3840 /* BreakoutTests.swift */; };
+		A95B29EF1B792D4E002E3840 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B29EE1B792D4E002E3840 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A95B29DC1B78E138002E3840 /* BreakoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95B29E11B78E138002E3840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95B29E21B78E138002E3840 /* BreakoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutTests.swift; sourceTree = "<group>"; };
+		A95B29EE1B792D4E002E3840 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				A95B29CC1B78E137002E3840 /* AppDelegate.swift */,
 				A95B29CE1B78E137002E3840 /* BreakoutViewController.swift */,
 				A95B29D01B78E137002E3840 /* Main.storyboard */,
+				A95B29EE1B792D4E002E3840 /* GameView.swift */,
 				A95B29D31B78E137002E3840 /* Images.xcassets */,
 				A95B29CA1B78E137002E3840 /* Supporting Files */,
 			);
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95B29CF1B78E137002E3840 /* BreakoutViewController.swift in Sources */,
+				A95B29EF1B792D4E002E3840 /* GameView.swift in Sources */,
 				A95B29CD1B78E137002E3840 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				A95B29E81B78E138002E3840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A95B29E91B78E138002E3840 /* Build configuration list for PBXNativeTarget "BreakoutTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				A95B29EB1B78E138002E3840 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
